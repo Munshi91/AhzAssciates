@@ -49,15 +49,65 @@
     </div>
   </header>
 
-  <main>
+  <main class="max-w-6xl mx-auto bg-white">
+    <section class=" my-10 font-semibold">
+      <div class="text-xl breadcrumbs">
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>Expo</a></li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- search section -->
+    <section>
+      <h2 class="text-lg my-5">Search Event</h2>
+      <div class="m-4 lg:m-0 bg-slate-50 shadow-xl rounded-xl">
+        <div class="p-8 lg:flex lg:items-center lg:justify-center">
+          <form class="space-y-4 lg:space-y-0 lg:flex lg:space-x-4 lg:flex-nowrap">
+            <div class="">
+              <select class="w-full py-2.5 px-8 bg-white border border-gray-400 rounded outline-none focus:ring-2">
+                <option>Type</option>
+                <option>Apartment</option>
+                <option>Apartment</option>
+                <option>House</option>
+                <option>Villa</option>
+                <option>Hotel</option>
+              </select>
+
+            </div>
+            <div>
+              <input type="text" class="w-full p-2 border border-gray-400 rounded outline-none focus:ring-2"
+                Placeholder="Location" />
+            </div>
+            <div>
+              <input type="number" class="w-full p-2 border border-gray-400 rounded outline-none focus:ring-2"
+                placeholder="min" />
+            </div>
+            <div>
+              <input type="number" class="w-full p-2 border border-gray-400 rounded outline-none focus:ring-2"
+                placeholder="max" />
+            </div>
+            <div>
+              <button class="px-8 py-2 text-blue-100 bg-gray-600 rounded">
+                Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+
     <!-- banner section -->
 
-    <section class="bg-gray-100">
-      <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+    <section>
+      <div class="mx-auto max-w-screen-2xl px-4 py-5 sm:px-6 lg:px-8">
         <div class="items-end justify-between sm:flex">
           <div class="max-w-xl">
             <h2 class="text-4xl font-bold tracking-tight sm:text-5xl">
-              Read trusted reviews from our customers
+              Upcoming Events
             </h2>
 
             <p class="mt-8 max-w-lg text-gray-500">
