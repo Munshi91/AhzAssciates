@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahz Associates Event</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header class="sticky top-0 z-30 w-full px-2 py-4 bg-white sm:px-4 shadow-xl">
+    <div class="flex items-center justify-between mx-auto max-w-6xl">
+      <a href="#"> <img src="./images/AhzLogo.jpg" class="w-52" alt="">
+        <!-- <span class="text-2xl font-extrabold text-blue-600">Logo</span> -->
+      </a>
+      <div class="flex items-center space-x-1">
+        <ul class="hidden space-x-2 md:inline-flex">
+          <li>
+            <a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">Home</a>
+          </li>
+          <li>
+            <a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">Contact Us</a>
+          </li>
+        </ul>
+        <button class="btn bg-gradient-to-l from-[#C8102E] to-[#C8102E]/70 text-white  hidden md:block">Register
+          Now</button>
+        <!-- <button class="btn bg-gradient-to-l from-[#012169] to-[#012169]/80 text-white hidden md:block">Register
+          Now</button> -->
+        <div class=" inline-flex md:hidden">
+          <button class="flex-none px-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+            </svg>
+            <span class="sr-only">Open Menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="max-w-6xl mx-auto bg-white">
+    <section class=" my-10 font-semibold">
+      <div class="text-xl breadcrumbs">
+        <ul class="text-[#012169]">
+          <li><a>Home</a></li>
+          <li><a>Expo</a></li>
+          <li><a>All Event</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- search section -->
+    <section>
+      <h2 class="text-lg my-5 text-[#012169]">Search Event</h2>
+      <div class="m-4 lg:m-0 bg-slate-50 shadow-xl rounded-xl">
+        <div class="p-8 lg:flex lg:items-center lg:justify-center">
+          <form class="space-y-4 lg:space-y-0 lg:flex lg:space-x-4 lg:flex-nowrap">
+            <div>
+              <input class="input input-bordered join-item" placeholder="Search" />
+            </div>
+            <div class="">
+              <select class="w-full py-2.5 px-8 bg-white border border-gray-400 rounded outline-none focus:ring-2">
+                <option>Month</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>Jun</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+              </select>
+
+            </div>
+            <div class="">
+              <select class="w-full py-2.5 px-8 bg-white border border-gray-400 rounded outline-none focus:ring-2">
+                <option>Location</option>
+                <option>Bangladesh</option>
+                <option>India</option>
+                <option>Pakistan</option>
+                <option>Nepal</option>
+                <option>Others</option>
+              </select>
+
+            </div>
+            <div class="">
+              <select class="w-full py-2.5 px-8 bg-white border border-gray-400 rounded outline-none focus:ring-2">
+                <option>Event Type</option>
+                <option>Online</option>
+                <option>Offline</option>
+                <option>Others</option>
+              </select>
+
+            </div>
+
+            <div>
+              <button class="px-8 py-2 bg-gradient-to-l from-[#C8102E] to-[#C8102E]/70 text-white rounded">
+                Search</button>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- All Event -->
+
+    <!-- ====== Portfolio Section Start -->
+    <section x-data="
+            {
+              showCards: 'all',
+              activeClasses: 'bg-primary text-white',
+              inactiveClasses: 'text-body-color hover:bg-primary hover:text-white',
+            }
+          " class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="mx-auto mb-[60px] max-w-[510px] text-center">
+              <span class="text-primary mb-2 block text-lg font-semibold">
+                Our Portfolio
+              </span>
+              <h2 class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]">
+                Our Recent Projects
+              </h2>
+              <p class="text-body-color text-base">
+                There are many variations of passages of Lorem Ipsum available but
+                the majority have suffered alteration in some form.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="-mx-4 flex flex-wrap justify-center">
+          <div class="w-full px-4">
+            <ul class="mb-12 flex flex-wrap justify-center space-x-1">
+              <li class="mb-1">
+                <button @click="showCards = 'all' " :class="showCards == 'all' ? activeClasses : inactiveClasses "
+                  class="inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8">
+                  All Projects
+                </button>
+              </li>
+              <li class="mb-1">
+                <button @click="showCards = 'branding' "
+                  :class="showCards == 'branding' ? activeClasses : inactiveClasses "
+                  class="inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8">
+                  Branding
+                </button>
+              </li>
+              <li class="mb-1">
+                <button @click="showCards = 'design' " :class="showCards == 'design' ? activeClasses : inactiveClasses "
+                  class="inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8">
+                  Design
+                </button>
+              </li>
+              <li class="mb-1">
+                <button @click="showCards = 'marketing' "
+                  :class="showCards == 'marketing' ? activeClasses : inactiveClasses "
+                  class="inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8">
+                  Marketing
+                </button>
+              </li>
+              <li class="mb-1">
+                <button @click="showCards = 'development' "
+                  :class="showCards == 'development' ? activeClasses : inactiveClasses "
+                  class="inline-block rounded-lg py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8">
+                  Development
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="-mx-4 flex flex-wrap">
+          <div :class="showCards == 'all' || showCards == 'branding' ? 'block' : 'hidden' "
+            class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="relative mb-12">
+              <div class="overflow-hidden rounded-lg">
+                <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-01.jpg"
+                  alt="portfolio" class="w-full" />
+              </div>
+              <div class="relative z-10 mx-7 -mt-20 rounded-lg bg-white py-9 px-3 text-center shadow-lg">
+                <span class="text-primary mb-2 block text-sm font-semibold">
+                  Branding
+                </span>
+                <h3 class="text-dark mb-4 text-xl font-bold">Branding Design</h3>
+                <a href="javascript:void(0)"
+                  class="text-body-color hover:bg-primary hover:border-primary inline-block rounded-md border py-3 px-7 text-sm font-semibold transition hover:text-white">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div :class="showCards == 'all' || showCards == 'marketing' ? 'block' : 'hidden' "
+            class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="relative mb-12">
+              <div class="overflow-hidden rounded-lg">
+                <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-02.jpg"
+                  alt="portfolio" class="w-full" />
+              </div>
+              <div class="relative z-10 mx-7 -mt-20 rounded-lg bg-white py-9 px-3 text-center shadow-lg">
+                <span class="text-primary mb-2 block text-sm font-semibold">
+                  Marketing
+                </span>
+                <h3 class="text-dark mb-4 text-xl font-bold">
+                  Best Marketing tips
+                </h3>
+                <a href="javascript:void(0)"
+                  class="text-body-color hover:bg-primary hover:border-primary inline-block rounded-md border py-3 px-7 text-sm font-semibold transition hover:text-white">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div :class="showCards == 'all' || showCards == 'development' ? 'block' : 'hidden' "
+            class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="relative mb-12">
+              <div class="overflow-hidden rounded-lg">
+                <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-03.jpg"
+                  alt="portfolio" class="w-full" />
+              </div>
+              <div class="relative z-10 mx-7 -mt-20 rounded-lg bg-white py-9 px-3 text-center shadow-lg">
+                <span class="text-primary mb-2 block text-sm font-semibold">
+                  Development
+                </span>
+                <h3 class="text-dark mb-4 text-xl font-bold">Web Design Trend</h3>
+                <a href="javascript:void(0)"
+                  class="text-body-color hover:bg-primary hover:border-primary inline-block rounded-md border py-3 px-7 text-sm font-semibold transition hover:text-white">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div :class="showCards == 'all' || showCards == 'design' ? 'block' : 'hidden' "
+            class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="relative mb-12">
+              <div class="overflow-hidden rounded-lg">
+                <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-04.jpg"
+                  alt="portfolio" class="w-full" />
+              </div>
+              <div class="relative z-10 mx-7 -mt-20 rounded-lg bg-white py-9 px-3 text-center shadow-lg">
+                <span class="text-primary mb-2 block text-sm font-semibold">
+                  Design
+                </span>
+                <h3 class="text-dark mb-4 text-xl font-bold">
+                  Business Card Design
+                </h3>
+                <a href="javascript:void(0)"
+                  class="text-body-color hover:bg-primary hover:border-primary inline-block rounded-md border py-3 px-7 text-sm font-semibold transition hover:text-white">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div :class="showCards == 'all' || showCards == 'marketing' ? 'block' : 'hidden' "
+            class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="relative mb-12">
+              <div class="overflow-hidden rounded-lg">
+                <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-05.jpg"
+                  alt="portfolio" class="w-full" />
+              </div>
+              <div class="relative z-10 mx-7 -mt-20 rounded-lg bg-white py-9 px-3 text-center shadow-lg">
+                <span class="text-primary mb-2 block text-sm font-semibold">
+                  Marketing
+                </span>
+                <h3 class="text-dark mb-4 text-xl font-bold">Digital marketing</h3>
+                <a href="javascript:void(0)"
+                  class="text-body-color hover:bg-primary hover:border-primary inline-block rounded-md border py-3 px-7 text-sm font-semibold transition hover:text-white">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+          <div :class="showCards == 'all' || showCards == 'branding' ? 'block' : 'hidden' "
+            class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="relative mb-12">
+              <div class="overflow-hidden rounded-lg">
+                <img src="https://cdn.tailgrids.com/2.0/image/marketing/images/portfolio/portfolio-01/image-06.jpg"
+                  alt="portfolio" class="w-full" />
+              </div>
+              <div class="relative z-10 mx-7 -mt-20 rounded-lg bg-white py-9 px-3 text-center shadow-lg">
+                <span class="text-primary mb-2 block text-sm font-semibold">
+                  Branding
+                </span>
+                <h3 class="text-dark mb-4 text-xl font-bold">Creative Agency</h3>
+                <a href="javascript:void(0)"
+                  class="text-body-color hover:bg-primary hover:border-primary inline-block rounded-md border py-3 px-7 text-sm font-semibold transition hover:text-white">
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pagination Section -->
+      <div>
+        <ol class="flex justify-center gap-1 text-xs font-medium">
+          <li>
+            <a href="#"
+              class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180">
+              <span class="sr-only">Prev Page</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="block h-8 w-8 rounded border-blue-600 bg-blue-600 text-center leading-8 text-white">
+              1
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+              class="block h-8 w-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900">
+              2
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+              class="block h-8 w-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900">
+              3
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+              class="block h-8 w-8 rounded border border-gray-100 bg-white text-center leading-8 text-gray-900">
+              4
+            </a>
+          </li>
+
+          <li>
+            <a href="#"
+              class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 rtl:rotate-180">
+              <span class="sr-only">Next Page</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <!-- ====== Portfolio Section End -->
+
+
+
+  </main>
+
+  <footer class="border-t border-gray-200">
+    <div
+      class="container flex flex-col flex-wrap px-4 py-16 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
+      <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+        <!-- <a class="flex items-center justify-center text-4xl font-bold text-blue-700 md:justify-start">
+              Logo
+            </a> -->
+        <img src="./images/AhzLogo.jpg" class="w-48" alt="">
+        <p class="mt-2 text-sm text-justify text-gray-500">
+          Footer Dummay data Lorem....
+        </p>
+        <div class="flex mt-4">
+          <input type="text" class="h-auto p-2 text-sm border border-grey-light round text-grey-dark"
+            placeholder="Your email address" />
+          <button class="h-auto p-3 text-xs text-white bg-gradient-to-l from-[#C8102E] to-[#C8102E]/70 rounded-sm">
+            Subscribe
+          </button>
+        </div>
+        <div class="flex justify-center mt-4 lg:mt-2">
+          <a>
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-6 h-6 text-blue-600" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-6 h-6 text-blue-300" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+              </path>
+            </svg>
+          </a>
+          <a class="ml-3">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-6 h-6 text-pink-400" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <a class="ml-3">
+            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="0" class="w-6 h-6 text-blue-500" viewBox="0 0 24 24">
+              <path stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="justify-between w-full mt-4 text-center lg:flex">
+        <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+          <h2 class="mb-2 font-bold tracking-widest text-gray-900">
+            Useful Links
+          </h2>
+          <ul class="mb-8 space-y-2 text-sm list-none">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Home</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">About Us</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Blogs</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+          <h2 class="mb-2 font-bold tracking-widest text-gray-900">
+            Useful Links
+          </h2>
+          <ul class="mb-8 space-y-2 text-sm list-none">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Home</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">About Us</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Blogs</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+          <h2 class="mb-2 font-bold tracking-widest text-gray-900">
+            Useful Links
+          </h2>
+          <ul class="mb-8 space-y-2 text-sm list-none">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Home</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">About Us</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Blogs</a>
+            </li>
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center -mt-12">
+      <p class="text-base text-gray-400">
+        All rights reserved by @ company 2021
+      </p>
+    </div>
+  </footer>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>
